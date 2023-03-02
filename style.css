@@ -1,0 +1,96 @@
+body {
+    font-family: "Roboto";
+    line-height: 1.5;
+    background-color: #F2F4FC;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 24px;
+    font-weight: medium;
+}
+
+p {
+    font-size: 20px;
+    font-weight: regular;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: #6B708D;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cta {
+    margin-left: auto;
+}
+
+.btn-blue {
+    background-color: #072AC8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+}
+  
+.footer-nav {
+    margin-top: 10px;
+}
+  
+.footer-nav a {
+    color: #6B708D;
+    margin: 0 10px;
+}
+
+@media only screen and (min-width: 1200px) {
+    
+}
+  
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+}
+  
+@media only screen and (max-width: 767px) {
+    
+}
