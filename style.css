@@ -1,5 +1,5 @@
 body {
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     line-height: 1.5;
     background-color: #F2F4FC;
     margin: 0;
@@ -69,6 +69,18 @@ nav {
     text-decoration: none;
 }
 
+.newsletter {
+    position: relative;
+    background-color: #FFC600;
+    width: 1320px;
+    height: 500px
+    padding: 60px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
 footer {
     padding: 20px;
     text-align: center;
@@ -81,16 +93,4 @@ footer {
 .footer-nav a {
     color: #6B708D;
     margin: 0 10px;
-}
-
-@media only screen and (min-width: 1200px) {
-    
-}
-  
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
-
-}
-  
-@media only screen and (max-width: 767px) {
-    
 }

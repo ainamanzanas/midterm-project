@@ -1,27 +1,30 @@
-body {
-    font-family: "Roboto";
-    line-height: 1.5;
-    background-color: #F2F4FC;
-    margin: 0;
-    padding: 0;
+.form {
+    margin: auto;
+    width: 250px;
+    height: 350px;
+    border-width: 2px;
+    padding: 20px 10px 30px 20px;
+    position : relative;
+    align: center;
 }
-h1 {
-    font-size: 60px;
-    font-weight: bold;
+
+label {
+    float: left;
+    width: 250px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
-h2 {
-    font-size: 50px;
-    font-weight: bold;
+
+#first-name-input, #email-input, #phone-input, #message-input {
+    float: left;
+    width: 200px;
 }
-h3 {
-    font-size: 40px;
-    font-weight: bold;
-}
-h4 {
-    font-size: 24px;
-    font-weight: medium;
-}
-p {
-    font-size: 20px;
-    font-weight: regular;
+
+button {
+    text-align: center;
+    border-width: 0px;
+    float: left;
+    width: 60px;
+    margin: auto;
+    padding: 6px 6px;
 }
