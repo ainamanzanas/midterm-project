@@ -1,21 +1,38 @@
 .hero-section {
-    display: grid;
+    display: flex;
     grid-template-columns: 720px 650x;
     position: relative;
     padding-bottom: 100px;
 }
 
 .hero-text {
-    grid-column: 1;
-    weight: 750px;
-    height: 650px;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.btn-blue {
+    background-color: #072AC8;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 37px;
+    max-width: 150px;
+    max-height: 52px;
+    gap: 10px;
 }
 
 .hero-image {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
     background-image: url(./assets/hero-section/hero-image.png);
     background-repeat: no-repeat;
     background-size: 570px 650px;
-    grid-column: 2;
     position: absolute;
 }
 
@@ -23,14 +40,14 @@
     top: 0;
     left:0;
     width: 190px;
-    height: 193px;
+    max-height: 193px;
 }
 
 .card-2 {
     bottom: 0;
     right: 0;
     width: 190px;
-    height: 193px;
+    max-height: 193px;
 }
 
 .logos {
@@ -40,8 +57,13 @@
     align-items: center;
     opacity: 1;
     visibility: inherit;
-    padding: 100px 20px;
+    margin: 170px 87px;
     filter: grayscale(100%);
+}
+
+.logo {
+    width: 150px;
+    height: 96px;;
 }
 
 .projects-section > div {
@@ -51,13 +73,17 @@
     flex-wrap: nowrap;
 }
 
+.projects-section h3 {
+    padding: 50px;
+}
+
 .project-card {
     position: relative;
     background-color: #ffffff;
     text-align: left;
     border: 2px, solid, #ffffff;
     box-sizing: border-box;
-    box-shadow: 0px 38.7px 77.5px #6B708D;
+    box-shadow: 0px 38px 77px #6B708D;
     margin: 50px;
     width: 340px;
     height: 444px;
@@ -86,6 +112,7 @@
     margin: 50px;
     padding: 20px;
     position: relative;
+    display: flex;
 }
 
 .icon {
@@ -115,16 +142,25 @@
 }
 
 .testimonial-background {
-    max-width: 1320px;
-    height: 622px;
+    max-width: auto;
+    height: auto;
+    position: absolute;
 }
   
 .testimonial-text,
 .testimonial-workplace {
-    top: 0;
-    color: #ffffff;
+    top: 1px;
+    color: #F4F6FC;
     text-decoration: none;
     position: relative;
+}
+
+.testimonial-text {
+    position: relative;
+    width: 694px;
+    height: 382px;
+    left: 240px;
+    top: 1px;
 }
 
 .testimonial-name {
@@ -159,11 +195,12 @@
     box-sizing: border-box;
     box-shadow: 0px 38.7px 77.5px #6B708D;
     margin: 50px;
+    padding: 20px;
     width: 340px;
     height: 444px;
 }
 
-.services-card h5, h6 {
+.services-card h5, h6, p {
     padding-left: 20px;
     line-height: normal;
 }
@@ -182,16 +219,20 @@
 
 .newsletter {
     background-color: #FFC600;
+    margin: 50px;
     padding: 50px 0;
     text-align: center;
+    justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
 }
 
-.form-group label {
-    margin-bottom: 20px;
-}
+.email-icon {
+    padding-right: 25px;
+    background: url("./assets/newsletter/icon/") no-repeat right;
+    background-size: 20px;
+  }
 
 .form-group input[type="email"] {
     flex: 1;

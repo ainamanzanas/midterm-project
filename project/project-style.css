@@ -1,0 +1,102 @@
+.main-project {
+    padding: 140px 110px 70px 110px;
+    max-width: 1100px;
+    padding-bottom: 70px;
+}
+
+.main-project-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 80px;
+}
+
+.main-project img {
+    box-shadow: 1px 1px 10px #6B708D;
+}
+
+p {
+    color: #6B708D;
+}
+
+span {
+    color: black;
+}
+
+.projects-section {
+    padding-left: 110px;
+    margin-bottom: 200px;
+    max-width: 1100px;
+}
+
+.project-card {
+    background-color: #ffffff;
+    text-align: left;
+    border: 2px, solid, #ffffff;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 10px #6B708D;
+    width: 340px;
+    height: 444px;
+    margin: 20px;
+}
+
+.project-card h5, h6 {
+    padding-left: 30px;
+    line-height: normal;
+}
+
+.project-card img {
+    width: 340px;
+    height: 240px;
+}
+
+.project-card a {
+    color: #072AC8;
+    text-decoration: none;
+}
+
+.main-project-description {
+    padding-top: 70px;
+}
+
+@media only screen and (min-width: 1200px) {
+    .main-project img {
+        width: 1100px;
+        height: 444px;
+    }
+
+    .projects-section > div {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
+  
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .main-project img {
+        width: 555px;
+        height: 222px;
+    }
+}
+  
+@media only screen and (max-width: 767px) {
+    .main-project img {
+        max-width: 555px;
+        max-height: 222px;
+    }
+
+    .main-project {
+        max-width: 555px;
+        max-height: 222px;
+    }
+
+    .projects-section > div {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow: auto;
+    }
+} 

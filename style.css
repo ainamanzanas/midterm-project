@@ -1,11 +1,10 @@
 body {
     font-family: "Roboto", sans-serif;
-    line-height: 1.5;
     background-color: #F2F4FC;
-    margin: 120px;
     padding: 0;
     max-width: 1440px;
     max-height: 650px;
+    margin: 60px;
 }
 
 h1 {
@@ -26,6 +25,7 @@ h3 {
 h4 {
     font-size: 24px;
     font-weight: bold;
+    color: #6B708D;
 }
 
 h5 {
@@ -45,24 +45,27 @@ p {
 
 nav {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 80px;
+    margin: 0 110px 0;
+    max-width: 1440px;
+    max-height: 122px;
 }
 
 .logo img {
     width: 50px;
     height: 100px;
-
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-}
-
-.nav-links li {
-    margin-right: 30px;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    gap: 60px;
+    margin: 280px;
 }
 
 .nav-links a {
@@ -70,36 +73,70 @@ nav {
     text-decoration: none;
 }
 
-.cta {
-    margin-left: auto;
+.contact-cta {
+    margin-right: 110px;
 }
 
-.btn-blue {
-    background-color: #072AC8;
-    color: white;
-    padding: 10px;
-    border-radius: none;
-    text-decoration: none;
-    
-}
 
 .newsletter {
-    position: relative;
     background-color: #FFC600;
-    width: 1320px;
-    height: 500px
+    max-width: 1320px;
+    height: 500px;
+    margin-bottom: 170px;
+}
+
+.newsletter-content {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 136px;
+}
+
+.newsletter-content input {
+    background-color: #ffffff;
+    border: none;
+    max-width: 393px;
+    max-height: 80px;
 }
 
 footer {
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    margin: 30px 110px 100px;
 }
-  
-.footer-nav {
-    margin-top: 10px;
+
+.company-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
 }
-  
-.footer-nav a {
-    color: #6B708D;
-    margin: 0 10px;
+
+.column-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
 }
+
+.column {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+footer ul {
+    list-style-type: none;
+    color:#6B708D;
+    margin: 0;
+    padding: 0;
+}
+
