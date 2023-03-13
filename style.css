@@ -10,6 +10,7 @@ body {
 h1 {
     font-size: 60px;
     font-weight: bold;
+    margin-bottom: 30px;
 }
 
 h2 {
@@ -43,14 +44,26 @@ p {
     font-weight: normal;
 }
 
+.btn-blue {
+    background-color: #072ACB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 36px;
+    gap: 10px;
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+    border: none;
+}
+
+
 nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 0 110px 0;
-    max-width: 1440px;
-    max-height: 122px;
+    margin: 0 100px 0;
 }
 
 .logo img {
@@ -97,11 +110,15 @@ nav {
     padding-top: 136px;
 }
 
+.newsletter-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .newsletter-content input {
-    background-color: #ffffff;
-    border: none;
-    max-width: 393px;
-    max-height: 80px;
+    width: 393px;
+    height: 80px;
 }
 
 footer {
@@ -123,13 +140,6 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-}
-
-.column {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     flex-direction: column;
 }
 
