@@ -1,7 +1,9 @@
 .main-project {
-    padding: 140px 110px 70px 110px;
-    max-width: 1100px;
-    padding-bottom: 70px;
+    margin: 40px 170px 80px 170px;
+}
+
+.main-project h1 {
+    margin-bottom: 20px;
 }
 
 .main-project-title {
@@ -12,9 +14,12 @@
     margin-bottom: 80px;
 }
 
-.main-project img {
+.project-content img {
+    width: 100%;
+    height: 444px;
     box-shadow: 1px 1px 10px #6B708D;
 }
+
 
 p {
     color: #6B708D;
@@ -24,31 +29,62 @@ span {
     color: black;
 }
 
+.main-project-description {
+    padding-top: 70px;
+}
+
 .projects-section {
-    padding-left: 110px;
-    margin-bottom: 200px;
-    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    max-height: 561px;
+    padding: 0 170px 200px 170px;
+}
+
+.projects-section h3 {
+    margin-bottom: 70px;
+}
+
+.project-card h5 {
+    padding-bottom: 10px;
+}
+
+.projects-section div {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0;
 }
 
 .project-card {
+    display: flex;
+    flex-direction: column;
     background-color: #ffffff;
     text-align: left;
-    border: 2px, solid, #ffffff;
+    border: none;
     box-sizing: border-box;
     box-shadow: 1px 1px 10px #6B708D;
-    width: 340px;
-    height: 444px;
-    margin: 20px;
+    max-width: 340px;
+    max-height: 100%;
+    margin-right: 40px;
+    margin-bottom: 200px;
+}
+
+.project-card:last-child {
+    margin-right: 0px;
 }
 
 .project-card h5, h6 {
     padding-left: 30px;
-    line-height: normal;
+    padding-bottom: 0%;
+}
+
+.project-card h6 {
+    color: #6B708D;
 }
 
 .project-card img {
-    width: 340px;
-    height: 240px;
+    width: 100%;
+    height: 50%;
 }
 
 .project-card a {
@@ -56,47 +92,96 @@ span {
     text-decoration: none;
 }
 
-.main-project-description {
-    padding-top: 70px;
-}
+/*mobile screen*/
 
-@media only screen and (min-width: 1200px) {
-    .main-project img {
-        width: 1100px;
-        height: 444px;
+@media only screen and (min-width: 400px) and (max-width: 767px) {
+    .main-project {
+        margin: 20px 85px 35px 85px;
     }
-
-    .projects-section > div {
+    
+    .main-project h1 {
+        margin-bottom: 5px;
+    }
+    
+    .main-project-title {
         display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
     }
-}
-  
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
-    .main-project img {
-        width: 555px;
+    
+    .project-content img {
         height: 222px;
     }
-}
-  
-@media only screen and (max-width: 767px) {
-    .main-project img {
-        max-width: 555px;
-        max-height: 222px;
+    .projects-section {
+        margin: 0 85px 100px 85px;
     }
-
-    .main-project {
-        max-width: 555px;
-        max-height: 222px;
+    
+    .projects-section h3 {
+        margin-bottom: 35px;
     }
-
-    .projects-section > div {
+    
+    .projects-section div {
         display: flex;
-        justify-content: space-between;
         flex-direction: column;
-        flex-wrap: nowrap;
-        overflow: auto;
     }
-} 
+    
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        text-align: left;
+        border: none;
+        box-sizing: border-box;
+        box-shadow: 1px 1px 10px #6B708D;
+        max-width: 340px;
+        margin-bottom: 40px;
+
+}
+
+/*tablet screen*/
+
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+    .main-project {
+        margin: 30px 105px 45px 105px;
+    }
+    
+    .main-project h1 {
+        margin-bottom: 10px;
+    }
+    
+    .main-project-title {
+        margin-bottom: 40px;
+    }
+    
+    .project-content img {
+        height: 333px;
+    }
+
+        }
+    .projects-section {
+        margin: 0 100px 120px 100px;
+    }
+    
+    .projects-section h3 {
+        margin-bottom: 35px;
+    }
+    
+    .projects-section div {
+        display: flex;
+        flex-direction: space-between;
+    }
+    
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        text-align: left;
+        border: none;
+        box-sizing: border-box;
+        box-shadow: 1px 1px 10px #6B708D;
+        max-width: 340px;
+        margin-bottom: 40px;
+    }
+}
+
