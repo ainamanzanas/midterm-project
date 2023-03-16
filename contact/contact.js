@@ -8,14 +8,16 @@ window.onload = () => {
         const phone = document.querySelector('#phone-input').value;
         const message = document.querySelector('#message-input').value;
 
+        if (form.name === 'Ironhack') {
+                alert('You cannot be Ironhack, because I am Ironhack.');
+        }
+
         const newContact = {
             name,
             email,
             phone,
             message
         };
-
-        console.log(newContact);
 
         _saveContactData(newContact);
     }
@@ -30,8 +32,18 @@ window.onload = () => {
             body: JSON.stringify(contact)
         })
             .then(response => response.json())
-            .then(response => console.log(JSON,stringify(response)))
-            .catch(err => console.log(err))
+            .then(response => console.log(JSON.stringify(response)))
+            .then(response => {
+                if (response.status === 201) {
+                  alert('Thank you! We will contact you soon.');
+                } else {
+                  alert('There was an error while retriving your form, please try again.');
+                }
+              })
+              .catch(error => {
+                alert('There was an error while retriving your form, please try again.');
+              });
+          };
     }
 
     function _bindElements () {
@@ -39,7 +51,3 @@ window.onload = () => {
 
         submit.addEventListener('click', _handleSubmit);
     }
-
-    _bindElements();
-
-}
