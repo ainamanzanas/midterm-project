@@ -1,4 +1,4 @@
-# # Frontend Midterm Project | Aina
+## Frontend Midterm Project | Aina
 
 
 ## Introduction
