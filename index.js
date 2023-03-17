@@ -19,7 +19,7 @@ window.onload = () => {
                 'Accept': 'application/json',
                 'Content-Type':'application/json'
             },
-            body: JSON.stringify(contact)
+            body: JSON.stringify(contact),
             body: JSON.stringify({ email: email })
         })
             .then(response => response.json())
