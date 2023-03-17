@@ -1,7 +1,7 @@
 window.onload = () => {
 
   document.querySelectorAll('a[href^="#services"]').forEach(anchor => {
-    anchor.addEventListener('click', function(event) {
+    anchor.addEventListener('click', function (event) {
       event.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
       window.scrollTo({
@@ -12,7 +12,7 @@ window.onload = () => {
   });
 
   document.querySelectorAll('a[href^="#projects"]').forEach(anchor => {
-    anchor.addEventListener('click', function(event) {
+    anchor.addEventListener('click', function (event) {
       event.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
       window.scrollTo({
@@ -22,43 +22,56 @@ window.onload = () => {
     });
   });
 
+  const form = document.getElementById("form");
   const email = document.getElementById("email-input");
+  const submit = document.getElementById("submit-btn");
 
-  email.addEventListener("input", function (event) {
-    if (email.validity.typeMismatch) {
+  submit.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    if (!isValidEmail(email.value)) {
       email.setCustomValidity("An email format is expected!");
+      alert("The email address is incorrect, please try again.");
     } else {
       email.setCustomValidity("Valid email format");
+      alert("Form submited succesfully!");
+      form.submit();
     }
   });
 
-const SERVER_URL ='http://localhost:3001/newsletter-contacts';
+  // Validate email address format
+  function isValidEmail(email) {
+    const emailRegex = /\S+@\S+\.\S+/;
+    return emailRegex.test(email);
+  };
 
-    function _handleSubmit() {
-        const email = document.querySelector('email-input').value;
+  const SERVER_URL = 'http://localhost:3001/newsletter-contacts';
 
-        const newContact = {
-            email,
-        };
+  function _handleSubmit() {
+    const email = document.querySelector('email-input').value;
 
-        _saveContactData(newContact);
-    }
+    const newContact = {
+      email,
+    };
 
-    function _saveContactData(contact) {
-        fetch(SERVER_URL, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type':'application/json'
-            },
-            body: JSON.stringify(contact),
-            body: JSON.stringify({ email: email })
-        });
-    }
+    _saveContactData(newContact);
+  }
 
-    function _bindElements () {
-        const submit = document.querySelector(".submit");
+  function _saveContactData(contact) {
+    fetch(SERVER_URL, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(contact),
+      body: JSON.stringify({ email: email })
+    });
+  }
 
-        submit.addEventListener('click', _handleSubmit);
-    }
+  function _bindElements() {
+    const submit = document.querySelector(".submit");
+
+    submit.addEventListener('click', _handleSubmit);
+  }
 }
