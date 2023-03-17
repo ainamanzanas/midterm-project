@@ -1,9 +1,41 @@
-const SERVER_URL ='http://localhost:3001/newsletter-contacts';
-
 window.onload = () => {
 
+  document.querySelectorAll('a[href^="#services"]').forEach(anchor => {
+    anchor.addEventListener('click', function(event) {
+      event.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      window.scrollTo({
+        top: target.offsetTop,
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  document.querySelectorAll('a[href^="#projects"]').forEach(anchor => {
+    anchor.addEventListener('click', function(event) {
+      event.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      window.scrollTo({
+        top: target.offsetTop,
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  const email = document.getElementById("email-input");
+
+  email.addEventListener("input", function (event) {
+    if (email.validity.typeMismatch) {
+      email.setCustomValidity("An email format is expected!");
+    } else {
+      email.setCustomValidity("Valid email format");
+    }
+  });
+
+const SERVER_URL ='http://localhost:3001/newsletter-contacts';
+
     function _handleSubmit() {
-        const email = document.querySelector('#email-input').value;
+        const email = document.querySelector('email-input').value;
 
         const newContact = {
             email,
@@ -21,19 +53,7 @@ window.onload = () => {
             },
             body: JSON.stringify(contact),
             body: JSON.stringify({ email: email })
-        })
-            .then(response => response.json())
-            .then(response => console.log(JSON.stringify(response)))
-            .then(response => {
-              if (response.status === 201) {
-                alert('Thanks for subscribing to our newsletter!');
-              } else {
-                alert('Please try again.');
-              }
-            })
-            .catch(error => {
-              alert('Please try again.');
-            });
+        });
     }
 
     function _bindElements () {

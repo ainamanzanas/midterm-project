@@ -58,6 +58,7 @@
     margin-top: 40px;
 }  
   
+  
 
 /*desktop*/
 
@@ -100,6 +101,9 @@
         font-size: 40px;
     }
     
+    .form-row {
+        grid-column: 1;
+    }
     
     .form-container input {
         height: 40px;

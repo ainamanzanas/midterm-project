@@ -36,16 +36,18 @@ span {
 .projects-section {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
     max-height: 561px;
-    padding: 0 170px 200px 170px;
+    margin: 0 170px 200px 170px;
 }
 
 .projects-section h3 {
     margin-bottom: 70px;
 }
 
-.project-card h5 {
-    padding-bottom: 10px;
+.projects-section h5 {
+    margin-bottom: 0;
 }
 
 .projects-section div {
@@ -63,17 +65,24 @@ span {
     border: none;
     box-sizing: border-box;
     box-shadow: 1px 1px 10px #6B708D;
-    max-width: 340px;
-    max-height: 100%;
+    width: 340px;
+    height: 444px;
     margin-right: 40px;
     margin-bottom: 200px;
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
 }
 
 .project-card:last-child {
     margin-right: 0px;
 }
 
-.project-card h5, h6 {
+.project-card h5,
+.project-card h6 {
     padding-left: 30px;
     padding-bottom: 0%;
 }
@@ -83,8 +92,9 @@ span {
 }
 
 .project-card img {
-    width: 100%;
-    height: 50%;
+    width: 340px;
+    height: 240px;
+    margin-bottom: 0;
 }
 
 .project-card a {
@@ -110,33 +120,21 @@ span {
         align-items: flex-start;
     }
     
-    .project-content img {
-        height: 222px;
-    }
     .projects-section {
-        margin: 0 85px 100px 85px;
-    }
-    
-    .projects-section h3 {
-        margin-bottom: 35px;
+        max-height: 50%;
+        margin:  0 85px 65px 85px;
     }
     
     .projects-section div {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        text-align: left;
     }
     
     .project-card {
-        display: flex;
-        flex-direction: column;
-        background-color: #ffffff;
-        text-align: left;
-        border: none;
-        box-sizing: border-box;
-        box-shadow: 1px 1px 10px #6B708D;
-        max-width: 340px;
-        margin-bottom: 40px;
-
+        margin-bottom: 80px;
+    }
 }
 
 /*tablet screen*/
@@ -157,31 +155,23 @@ span {
     .project-content img {
         height: 333px;
     }
-
-        }
-    .projects-section {
-        margin: 0 100px 120px 100px;
-    }
     
-    .projects-section h3 {
-        margin-bottom: 35px;
+    .projects-section {
+        align-items: center;
+        max-height: 50%;
+        margin:  0 85px 65px 85px;
     }
     
     .projects-section div {
         display: flex;
-        flex-direction: space-between;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: left;
     }
     
     .project-card {
-        display: flex;
-        flex-direction: column;
-        background-color: #ffffff;
-        text-align: left;
-        border: none;
-        box-sizing: border-box;
-        box-shadow: 1px 1px 10px #6B708D;
-        max-width: 340px;
-        margin-bottom: 40px;
+        height: 444px;
+        margin-bottom: 80px;
     }
 }
 

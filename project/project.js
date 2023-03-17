@@ -2,6 +2,38 @@ const SERVER_URL ='https://raw.githubusercontent.com/ironhack-jc/mid-term-api/ma
 
 window.onload = () => {
 
+  document.querySelectorAll('a[href^="#services"]').forEach(anchor => {
+    anchor.addEventListener('click', function(event) {
+      event.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      window.scrollTo({
+        top: target.offsetTop,
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  document.querySelectorAll('a[href^="#projects"]').forEach(anchor => {
+    anchor.addEventListener('click', function(event) {
+      event.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      window.scrollTo({
+        top: target.offsetTop,
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  const email = document.getElementById("email-input");
+
+  email.addEventListener("input", function (event) {
+    if (email.validity.typeMismatch) {
+      email.setCustomValidity("An email format is expected!");
+    } else {
+      email.setCustomValidity("Valid email format");
+    }
+});
+
     function _handleSubmit() {
         const name = document.querySelector('#first-name-input').value;
         const email = document.querySelector('#email-input').value;

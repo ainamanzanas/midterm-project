@@ -90,9 +90,18 @@
     filter: grayscale(100%);
 }
 
-.logo img {
+.logo {
     width: 150px;
-    height: 96px;
+    height: 96px;;
+}
+
+.logo img {
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+.logo img:hover{
+    transform: scale(1.2);
 }
 
 .logos img:last-child {
@@ -135,6 +144,12 @@
     height: 444px;
     margin-right: 40px;
     margin-bottom: 200px;
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
 }
 
 .project-card:last-child {
@@ -223,6 +238,7 @@
 
 .testimonial-name {
     color: #A2D6F9;
+    font-size: 17px;
     margin-bottom: 5px;
 }
 
@@ -286,6 +302,12 @@
     height: 380px;
     margin-right: 40px;
     margin-bottom: 200px;
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+.services-card:hover {
+    transform: scale(1.1);
 }
 
 .services-card:last-child {
@@ -424,6 +446,11 @@
         flex-direction: column;
         text-align: left;
         margin-left: 10px;
+    }
+
+    .testimonial-workplace {
+        font-size: 8px;
+        text-decoration: none;
     }
     
     .profile-picture {
